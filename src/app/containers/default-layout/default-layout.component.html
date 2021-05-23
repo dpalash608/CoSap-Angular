@@ -1,0 +1,35 @@
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/co-sap-logo.png', width: 100, height: 50, alt: 'CO-SAP Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/co-sap-logo.png', width: 90, height: 45, alt: 'CO-SAP Logo'}"
+  [sidebarToggler]="'lg'">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Help</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="fa fa-lock"></i>&nbsp; Logout</a>
+    </li>
+  </ul>
+</app-header>
+<div class="app-body">
+  <app-sidebar #appSidebar [fixed]="true" [minimized]="sidebarMinimized" (minimizedChange)="toggleMinimize($event)">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div><!-- /.container-fluid -->
+  </main>
+</div>
+<app-footer>
+  <span><a href="">CO-SAP</a> &copy; 2020 Scholar@SAP.</span>
+  <span class="ml-auto">Powered by BITS Pilani</span>
+</app-footer>
