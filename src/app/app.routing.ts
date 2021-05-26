@@ -8,7 +8,6 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import{DashboardAdminComponent} from './views/dashboard-admin/dashboard-admin.component';
 
 export const routes: Routes = [
   {
@@ -62,6 +61,14 @@ export const routes: Routes = [
       {
         path: 'charts',
         loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+      },
+      {
+        path: 'booking',
+        loadChildren: () => import('./views/dose-book/dose-book.module').then(m => m.DoseBookModule)
+      },
+      {
+        path: 'success',
+        loadChildren: () => import('./views/succesfull/succesfull.module').then(m => m.SucessModule)
       },
       {
         path: 'dashboard-admin',

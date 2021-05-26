@@ -5,14 +5,26 @@
         <div class="col-md-6 mx-auto">
           <div class="card mx-4">
             <div class="card-body p-4">
-              <form>
+              <form  >
                 <h1>Register</h1>
                 <p class="text-muted">Create your account</p>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-user"></i></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username" autocomplete="username" required>
+                  <input type="text" [(ngModel)]="username" name="first" class="form-control" placeholder="INumber" autocomplete="username" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="name" name="second" class="form-control" placeholder="Name" autocomplete="name" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-phone"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Contact" autocomplete="contact" required>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -20,6 +32,7 @@
                   </div>
                   <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
                 </div>
+                
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-lock"></i></span>
@@ -32,7 +45,7 @@
                   </div>
                   <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
                 </div>
-                <button type="button" class="btn btn-block btn-success">Create Account</button>
+                <button type="button" (click)="clickme()" class="btn btn-block btn-success">Create Account</button>
               </form>
             </div>
             <div class="card-footer p-4">
