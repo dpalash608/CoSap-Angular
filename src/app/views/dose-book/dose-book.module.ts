@@ -4,10 +4,13 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { DoseBookComponent } from './dose-book.component';
 import { DoseBookRoutingModule } from './dose-book-routing.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     DoseBookRoutingModule,
+    FormsModule,
     ChartsModule,
     BsDropdownModule
   ],

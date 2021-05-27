@@ -1,74 +1,32 @@
-<p>dose-book works!</p>
-<div class="animated fadeIn">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-align-justify"></i> Slots Available
-          </div>
-          <div class="card-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Username</th>
-                  <th>Date registered</th>
-                  <th>Role</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="cursor: pointer;"
-                onMouseOver="this.style.background='#0F0'"
-                onMouseOut="this.style.color='#000' , this.style.background=' #ffffff'" 
-                class="clickable text-center" 
-                onclick="window.location='https://www.google.com'">
-                  <td>Samppa Nori</td>
-                  <td>2012/01/01</td>
-                  <td>Member</td>
-                  <td>
-                    <span class="badge badge-success">Active</span>
-                  </td>
-                </tr>
-                <tr class="clickable text-center" 
-                onclick="window.location='https://www.google.com'">
-                  <td>Estavan Lykos</td>
-                  <td>2012/02/01</td>
-                  <td>Staff</td>
-                  <td>
-                    <span class="badge badge-danger">Banned</span>
-                  </td>
-                </tr>
-                <tr >
-                  <td>Chetan Mohamed</td>
-                  <td>2012/02/01</td>
-                  <td>Admin</td>
-                  <td>
-                    <span class="badge badge-secondary">Inactive</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Derick Maximinus</td>
-                  <td>2012/03/01</td>
-                  <td>Member</td>
-                  <td>
-                    <span class="badge badge-warning">Pending</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Friderik Dávid</td>
-                  <td>2012/01/21</td>
-                  <td>Staff</td>
-                  <td>
-                    <span class="badge badge-success">Active</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+              <form  >
+                <h1>Increase Slots</h1>
+                <p class="text-muted">A for less than 18 | B for 18-45 | C for 45+ </p>
+                
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="agegrp" name="first" class="form-control" placeholder="Age Group" autocomplete="name" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="stock" name="second" class="form-control" placeholder="Stocks" autocomplete="name" required>
+                </div>
+                <button type="button" (click)="stockload()" class="btn btn-block btn-success">Create Account</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <!--/.col-->
     </div>
-    <!--/.row-->
-  </div>
-  
+  </main>
+</div>

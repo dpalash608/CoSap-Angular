@@ -12,4 +12,10 @@ export class DefaultLayoutComponent {
   toggleMinimize(e) {
     this.sidebarMinimized = e;
   }
+  Logout()
+  {
+    sessionStorage.clear();
+    window.open("http://localhost:4200/#/login","_self");
+  }
+
 }

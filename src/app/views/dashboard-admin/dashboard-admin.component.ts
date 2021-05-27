@@ -1,12 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+
 @Component({
   templateUrl: './dashboard-admin.component.html'
 })
 export class DashboardAdminComponent implements OnInit {
   radioModel: string = 'Month';
+  vaccineA:Number = 0;
+  vaccineB:Number = 0;
+  vaccineC:Number = 0;
 
+  vaccine : any;
+
+  increase()
+  {
+    window.open("http://localhost:4200/#/booking","_self");
+  }
   // lineChart1
   public lineChart1Data: Array<any> = [
     {
@@ -376,6 +386,35 @@ export class DashboardAdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+    const url = "http://localhost:8080/api/v1/vaccine";
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      for (let i = 0; i < data.length; i++) {
+        if(data[i].ageGrp == "A")
+        {
+        this.vaccineA = +this.vaccineA + +Number(data[i].stock);
+        }
+        if(data[i].ageGrp == "B")
+        {
+        this.vaccineB = +this.vaccineB + +Number(data[i].stock);
+        }
+        if(data[i].ageGrp == "C")
+        {
+        this.vaccineC = +this.vaccineC + +Number(data[i].stock);
+        }
+      }
+    }
+    );
+    
+    fetch("http://localhost:8080/api/v1/register")
+    .then(response => response.json())
+    .then(data => this.vaccine = data);
+
+    console.log("Vaccines are " + this.vaccine);
+
 
     // generate random values for mainChart
     for (let i = 0; i <= this.mainChartElements; i++) {
