@@ -23,16 +23,19 @@ export class DoseBookComponent  {
         {
           this.vaccine = Number(this.stock) + Number(data[i].stock);
           this.postvaccine(this.vaccine,data[i].ageGrp);
+          break;
         }
         if(data[i].ageGrp == this.agegrp)
         {
           this.vaccine = Number(this.stock) + Number(data[i].stock);
           this.postvaccine(this.vaccine,data[i].ageGrp);
+          break;
         }
         if(data[i].ageGrp == this.agegrp)
         {
           this.vaccine = Number(this.stock) + Number(data[i].stock);
           this.postvaccine(this.vaccine,data[i].ageGrp);
+          break;
         }
       }
     }

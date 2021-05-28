@@ -12,83 +12,46 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Status Check',
-    url: '/theme/colors',
-    icon: 'icon-drop',
+    url: 'https://dashboard.cowin.gov.in/',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Covid19 Self Checker',
+    url: 'https://neubergdiagnostics.com/covid19-selfassessment/selfchecker.html',
+    icon: 'icon-pencil',
     badge: {
       variant: 'info',
       text: 'NEW'
     }
   },
   {
-    name: 'Health Check',
-    url: '/theme/typography',
-    icon: 'icon-pencil'
-  },
-  {
     name: 'Resources',
-    url: '/Resources',
-    icon: 'icon-puzzle',
-    children: [
-      {
-        name: 'Cards',
-        url: '/base/cards',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Carousels',
-        url: '/base/carousels',
-        icon: 'icon-puzzle'
-      }
-    ]
+    url: 'https://jam4.sapjam.com/groups/SxM5GuzBIhfUECmNpLGnle/overview_page/vFHjzlpe4giaC8sVG2sL81',
+    icon: 'icon-puzzle'
   },
   {
     name: 'FAQs',
-    url: '/buttons',
+    url: 'https://www.mohfw.gov.in/pdf/FAQCoWINforcitizens.pdf',
     icon: 'icon-cursor'
   },
   {
     name: 'Hospitals',
-    url: '/charts',
+    url: 'https://www.uhcpindia.com/web/statenotifications/documents/Networks/COVID%20-%20NETWORK%20HOSPITAL.pdf',
     icon: 'icon-pie-chart'
   },
   {
-    name: 'Settings',
-    url: '/icons',
-    icon: 'icon-star',
-    children: [
-      {
-        name: 'Delete My Account',
-        url: '/icons/coreui-icons',
-        icon: 'icon-star',
-        badge: {
-          variant: 'success',
-          text: 'NEW'
-        }
-      },
-      {
-        name: 'Change Password',
-        url: '/icons/flags',
-        icon: 'icon-star'
-      }
-    ]
-  },
-  {
     name: 'Privacy Policy',
-    url: '/notifications',
+    url: '/base/cards',
     icon: 'icon-bell',
   },
   {
     name: 'Terms Of Use',
     url: '/widgets',
     icon: 'icon-calculator',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
   },
   {
     name: 'Our Team',
-    url: '/widgets',
+    url: '/success',
     icon: 'icon-calculator',
     badge: {
       variant: 'info',
@@ -97,7 +60,6 @@ export const navItems: INavData[] = [
   },
   {
     name: 'App Version - 1.0.0',
-    url: '/pages',
     icon: 'icon-star',
     attributes: { disabled: true },
   }
