@@ -14,8 +14,10 @@ export class DefaultLayoutComponent {
   }
   Logout()
   {
-    sessionStorage.clear();
-    window.open("http://localhost:4200/#/login","_self");
+    //sessionStorage.clear();
+   window.open("http://localhost:4200/#/login","_self");
+    //window.location.replace("http://localhost:4200/#/login");
+
   }
 
 }
